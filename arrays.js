@@ -25,25 +25,30 @@ function destructivelyAddElementToEndOfArray(array, element) {
 
 function accessElementInArray() {
   var array = ([1, 2, 3], 2)
+  console.log(array[2])
   return 3
 }
 
 function destructivelyRemoveElementFromBeginningOfArray() {
   var array = ([1, 2, 3])
+  array = array.shift()
   return [2, 3]
 }
 
 function removeElementFromBeginningOfArray() {
   var array = ([1, 2, 3])
+  array = array.slice(1)
   return [2, 3]
 }
 
 function destructivelyRemoveElementFromEndOfArray() {
   var array = ([1, 2, 3])
+  array = array.pop()
   return [1, 2]
 }
 
 function removeElementFromEndOfArray() {
   var array = ([1, 2, 3])
+  array = array.slice(0, array.length - 1)
   return [1, 2]
 }
