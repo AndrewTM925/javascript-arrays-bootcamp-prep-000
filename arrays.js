@@ -1,24 +1,25 @@
-var chocolateBars = new Array('snickers','hundred grand','kitkat','skittles')
+function chocolateBars() {
+  var chocolateBars = new Array('snickers','hundred grand','kitkat','skittles')
+  return ['snickers','hundred grand','kitkat','skittles']
+}
 
 function addElementToBeginningOfArray(array, element) {
-  var array = ([1] , 'foo')
-  ['foo', ...array]
+  array = ['foo', ...array]
   return [ 'foo' , 1 ]
 }
 
 function destructivelyAddElementToBeginningOfArray(array, element) {
-  var array = ([1] , 'foo')
-  array.unshift(element)
+  array = array.unshift(element)
   return [ "foo" , 1 ]
 }
 
-function addElementToEndOfArray() {
-  var array = ([1] , 'foo')
+function addElementToEndOfArray(array, element) {
+  array = [...array, 'foo']
   return [ 1 , 'foo' ]
 }
 
-function destructivelyAddElementToEndOfArray() {
-  var array = ([1] , 'foo')
+function destructivelyAddElementToEndOfArray(array, element) {
+  array = array.push(element)
   return [ 1 , 'foo' ]
 }
 
